@@ -1,0 +1,372 @@
+html{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: auto;
+    min-height: 100%;
+    background: url("./assets/back4.jpg") no-repeat center center fixed; 
+    
+    background-size: cover;
+}
+
+/********* HOME ************/
+.img_home{
+    height: 500px;
+    width:500px;
+    margin-top: -40px;
+    margin-left: 35%;
+    margin-right: auto;
+    display: block;
+    
+}
+
+
+.home_btn{
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  display: block;
+  color: #181818;
+  background: #FFC700;
+}
+
+
+.home_btn {
+  width: 250px;
+  height: 50px;
+  font-size: 17px;
+  cursor: pointer;
+  transform: translate(8%, -58%);
+  padding: 10px 25px;
+  border: 2px solid #004F9F;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+
+.home_btn span:before,
+.home_btn span:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 36px;
+  height:34.5px;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+
+.home_btn span:before {
+  border-bottom: 3px solid #004F9F;
+  border-left: 3px solid #004F9F;
+  transform: rotate(45deg);
+  border-radius: 2px;
+  top: 6px;
+  left: -18px;
+}
+
+.home_btn:hover span:before {
+  left: -25px;
+  transform: rotate(-135deg);
+  animation: animateBefore 0.5s linear infinite;
+}
+
+.home_btn span:after {
+  border-top: 3px solid #004F9F;
+  border-right: 3px solid #004F9F;
+  border-radius: 2px;
+  transform: rotate(45deg);
+  top: 6px;
+  right: -18px;
+}
+
+.home_btn:hover span:after {
+  right: -25px;
+  transform: rotate(-135deg);
+  animation: animateAfter 0.5s linear infinite;
+}
+
+@keyframes animateBefore {
+  0% {
+    left: -25px;
+  }
+  50% {
+    left: -20px;
+  }
+  100% {
+    left: -25px;
+  }
+}
+
+@keyframes animateAfter {
+  0% {
+    right: -25px;
+  }
+  50% {
+    right: -20px;
+  }
+  100% {
+    right: -25px;
+  }
+}
+
+/********* OVERVIEW ************/
+
+.bulb_img{
+  margin-left: 10%;
+  margin-right: auto;
+  float: left;
+  padding: 10px;
+  margin-top: 100px;
+  border: 0px solid #004F9F;
+  border-radius: 25px;;
+  width: 200px;
+  height: 200px;
+}
+
+.charm_img{
+  margin-left: 20px;
+  margin-right: auto;
+  float: left;
+  padding: 10px;
+  margin-top: 100px;
+  border: 0px solid #004F9F;
+  border-radius: 25px;;
+  width: 200px;
+  height: 200px;
+}
+
+.pokemon_details{
+  display: flex;
+    justify-content: center;
+}
+
+.pokemon_details h1{
+  margin-right: 50px;
+  color: #004F9F;
+  border-right: 5px solid #004F9F;
+  padding-right: 20px}
+
+.bulb_img2{
+  margin-left: 43%;
+  
+  width: 200px;
+  height: 200px;
+}
+
+.header_img{
+    margin-left: 38.5%;
+    margin-right: auto;
+    display: block;
+    padding: 10px;
+}
+
+a{
+    text-decoration: none;
+    
+}
+
+  .secondary_button{
+    border-radius: 5px;
+    margin-left: 30%;
+    margin-right: 4.2%;
+    margin-top: 30px;
+    display: inline;
+    background: #FE9400;
+    width: 250px;
+    height: 50px;
+    font-size: 17px;
+    cursor: pointer;
+    transform: translate(2%, -58%);
+    padding: 10px 25px;
+    border: 4px solid #004F9F;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-sizing: border-box;
+    transition: 0.5s;
+  }
+
+
+  .secondary_button a{
+    color: #cccccc;;
+  }
+  
+  .secondary_button:hover{
+    color:#FFC700;
+  }
+  
+  
+  .secondary_button:hover{
+    background: #004F9F;
+    
+  }
+
+  .third_button{
+    border-radius: 5px;
+    margin-top:30px;
+    position: relative;
+    float: left;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #181818;
+    background: #FE9400;
+    width: 350px;
+    height: 50px;
+    font-size: 17px;
+    cursor: pointer;
+    padding: 10px 25px;
+    border: 4px solid #004F9F;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+.third_button a{
+  color: #cccccc;
+}
+
+.third_button:hover{
+  color:#cccccc;
+}
+
+
+.third_button:hover{
+  background: #004F9F;
+  
+}
+
+.save_change_btn{
+  margin-top: 20px;
+}
+
+.form-style-4{
+  margin-top: 10px;
+  width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  font-size: 20px;
+  background: #FE9400;
+  padding: 30px 30px 15px 30px;
+  border: 5px solid #004F9F;
+  border-radius: 5px;
+  
+}
+.form-style-4 input[type=submit],
+.form-style-4 input[type=button],
+.form-style-4 input[type=text],
+.form-style-4 input[type=email],
+.form-style-4 textarea,
+.form-style-4 label
+{
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 20px;
+  color: #004F9F;
+
+}
+.form-style-4 label {
+  display:block;
+  margin-bottom: 10px;
+}
+.form-style-4 label > span{
+  display: inline-block;
+  float: left;
+  width: 150px;
+}
+.form-style-4 input[type=text],
+.form-style-4 input[type=email] 
+{
+  background: transparent;
+  border: none;
+  border-bottom: 1px dashed #83A4C5;
+  width: 275px;
+  outline: none;
+  padding: 0px 0px 0px 0px;
+  
+}
+.form-style-4 textarea{
+  
+  padding: 0px 0px 0px 0px;
+  background: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 1px dashed #83A4C5;
+  width: 275px;
+  overflow: hidden;
+  resize:none;
+  height:20px;
+}
+
+.form-style-4 textarea:focus, 
+.form-style-4 input[type=text]:focus,
+.form-style-4 input[type=email]:focus,
+.form-style-4 input[type=email] :focus
+{
+  border-bottom: 1px dashed #D9FFA9;
+}
+
+.form-style-4 input[type=submit],
+.form-style-4 input[type=button]{
+  color: #181818;
+    background: #FE9400;
+    width: 350px;
+    height: 50px;
+    font-size: 17px;
+    cursor: pointer;
+    padding: 10px 25px;
+    border: 4px solid #004F9F;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    border-radius: 5px;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+}
+.form-style-4 input[type=submit]:hover,
+.form-style-4 input[type=button]:hover{
+background: #004F9F;
+}
+
+
+
+
+
+.fourth_button{
+  border-radius: 5px;
+  margin-left: 37.7%;
+  margin-top: 70px;
+  display: block;
+  
+  background: #FE9400;
+  width: 350px;
+  height: 50px;
+  font-size: 17px;
+  cursor: pointer;
+  padding: 10px 25px;
+  border: 4px solid #004F9F;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+
+.fourth_button a{
+color: #cccccc;
+}
+
+.fourth_button:hover{
+color:#cccccc;
+}
+
+
+.fourth_button:hover{
+background: #004F9F;
+
+}
