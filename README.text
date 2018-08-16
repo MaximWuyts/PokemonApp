@@ -1,0 +1,18 @@
+# PokemonApp
+
+Examen front end P3
+Maxim Wuyts
+KDG 2WEB & UX
+
+--> je kan het volledige project zien op git
+  https://github.com/MaximWuyts/PokemonApp/
+  
+--> link naar de online app 
+
+--> Het bestand unzippen hierin zitten 2 directories
+    De api en de pokemon_app
+    
+    Run in api         --> npm run dev
+    Run in pokemon_app --> npm install en daarna yarn start
+
+--> eenmaal op de app kan je pokemons toevoegen/aanpassen en verwijderen aan de lijst
