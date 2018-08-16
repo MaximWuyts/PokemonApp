@@ -14,11 +14,12 @@ class App extends Component {
       <div id="wrapper" className="test">
 
         <Route exact path="/" component={HomePage} />
+        <Route exact path="/pokemon" component={PokemonOverview} />
         <Route exact path="/pokemon-overview" component={PokemonOverview} />
         <Route exact path="/add-pokemon" component={AddPokemon} />
         <Route exact path="/pokemon/:name" component={PokemonDetails} />
         <Route exact path="/pokemon/edit/:name" component={PokemonEdit} />
-
+        <Route exact path="/pokemon/add" component={AddPokemon} />
 
       </div>
     );

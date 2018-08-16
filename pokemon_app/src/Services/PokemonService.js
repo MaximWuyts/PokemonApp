@@ -33,7 +33,7 @@ export const update = (id, pokemon) => {
 }
 
 export const add = (pokemon) => {
-  return fetch("http://localhost:8000/pokemon/add", {
+  return fetch("http://localhost:8000/pokemon/add-pokemon", {
     method: 'POST',
     body: JSON.stringify(pokemon),
     mode: 'cors',
