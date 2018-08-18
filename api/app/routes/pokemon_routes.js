@@ -4,10 +4,13 @@ const axios = require("axios");
 const ObjectID = require('mongodb').ObjectID;
 
 module.exports = function (app, db) {
+  var poks = [];
   app.get('/update/api', (req, res) => {
-    for (var i = 0; i < 2; i++) {
-      db.collection("Pokemons").remove();
-      axios.get(`https://pokeapi.co/api/v2/pokemon/${i}/`).then(response => {
+    for (var i = 1; i < 2; i++) {
+
+      axios.get("https://pokeapi.co/api/v2/pokemon/" + i).then(response => {
+
+        poks.push(axios.get("https://pokeapi.co/api/v2/pokemon/" + i));
         db.collection('Pokemons').insert(response.data, (err, results) => {
           if (err) {
             res.send({
@@ -27,7 +30,10 @@ module.exports = function (app, db) {
           res.send(error);
         });
     }
+
+    axios.all(poks);
   }
+
   )
 
   app.get('/pokemons/', (req, res) => {
