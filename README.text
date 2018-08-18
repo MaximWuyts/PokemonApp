@@ -15,4 +15,4 @@ KDG 2WEB & UX
     Run in api         --> npm run dev
     Run in pokemon_app --> npm install en daarna yarn start
 
---> eenmaal op de app kan je pokemons toevoegen/aanpassen en verwijderen aan de lijst
+--> eenmaal op de app kan je pokemons toevoegen/aanpassen en verwijderen aan de lijst 
