@@ -1,5 +1,4 @@
 import React from "react";
-import { MainButton } from "../buttons/MainButton.Component";
 import { Form } from "../forms/Form";
 import { Link } from 'react-router-dom';
 import header from "../../assets/header.png";
