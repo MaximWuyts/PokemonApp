@@ -32,7 +32,7 @@ export class PokemonOverview extends React.Component {
 
   render = () => {
     if (!this.state.pokemons.length) {
-      return <div>Loading...</div>;
+      return <MDSpinner className="spinner" size={100} color={'#FE9400'} />
     }
 
     /*<div id="overlay">
@@ -58,7 +58,7 @@ export class PokemonOverview extends React.Component {
         {this.renderPokemons()}
 
 
-      </div >
+      </div>
     );
   };
 }

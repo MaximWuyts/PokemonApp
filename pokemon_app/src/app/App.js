@@ -6,6 +6,7 @@ import { HomePage } from '../Components/_pages/HomePage.Component';
 import { AddPokemon } from '../Components/_pages/AddPokemon.Component';
 import { PokemonDetails } from "../Components/_pages/PokemonDetails.Component";
 import { PokemonEdit } from "../Components/_pages/PokemonEdit.Component";
+import { Loading } from "../Components/_pages/Loading.Component";
 
 
 class App extends Component {
@@ -20,6 +21,7 @@ class App extends Component {
         <Route exact path="/pokemon/:name" component={PokemonDetails} />
         <Route exact path="/pokemon/edit/:name" component={PokemonEdit} />
         <Route exact path="/pokemon/add" component={AddPokemon} />
+        <Route exact path="/loading" component={Loading} />
 
       </div>
     );
