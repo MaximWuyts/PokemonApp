@@ -16,3 +16,4 @@ KDG 2WEB & UX
     Run in pokemon_app --> npm install en daarna yarn start
 
 --> eenmaal op de app kan je pokemons toevoegen/aanpassen en verwijderen aan de lijst
+--> de loading animatie kan je zien op de pagina /loading waarbij 1 gemaakt is uit pure css en de andere via een react component
