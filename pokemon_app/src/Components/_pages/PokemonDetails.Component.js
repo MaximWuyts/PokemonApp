@@ -22,7 +22,7 @@ export class PokemonDetails extends React.Component {
 
     componentWillMount = () => {
 
-        PokemonService.getOne("5b7b189563a5a81842cb568e").then(response => {
+        PokemonService.getOne("5b7b2b4a63a5a81842cb568f").then(response => {
             if (response !== null) {
                 this.setState({
                     name: response.message.name,
@@ -35,7 +35,7 @@ export class PokemonDetails extends React.Component {
     }
 
     deletePokemon = () => {
-        PokemonService.del("5b7b189563a5a81842cb568e").then(() => {
+        PokemonService.del("5b7b2b4a63a5a81842cb568f").then(() => {
             console.log('test');
             this.props.history.push("/pokemon-overview");
             window.location.href = 'http://localhost:3000/';
