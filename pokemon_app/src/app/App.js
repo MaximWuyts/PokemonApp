@@ -21,6 +21,7 @@ class App extends Component {
         <Route exact path="/pokemon/:name" component={PokemonDetails} />
         <Route exact path="/pokemon/edit/:name" component={PokemonEdit} />
         <Route exact path="/pokemon/add" component={AddPokemon} />
+
         <Route exact path="/loading" component={Loading} />
 
       </div>

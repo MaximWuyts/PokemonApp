@@ -4,7 +4,7 @@ import * as PokemonService from '../../Services/PokemonService';
 export class PokemonDelete extends React.Component {
 
     deletePokemon = () => {
-        PokemonService.del("5b768ca0eda8ce321d8343f1").then(() => {
+        PokemonService.del("5b7afd4163a5a81842cb5689").then(() => {
             this.this.props.history.push("/pokemon-overview/");
         });
     }
