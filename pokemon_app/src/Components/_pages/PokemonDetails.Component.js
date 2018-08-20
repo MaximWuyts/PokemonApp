@@ -5,6 +5,7 @@ import { ThirdButton } from '../buttons/ThirdButton.Component';
 import { FourthButton } from '../buttons/FourthButton.Component';
 import header from "../../assets/header.png";
 import bulba from '../../assets/bulb.png';
+import { Pokemon } from "../pokemons/Pokemon";
 
 
 export class PokemonDetails extends React.Component {
@@ -20,19 +21,24 @@ export class PokemonDetails extends React.Component {
     }
 
     componentWillMount = () => {
-        PokemonService.getOne("5b7afee363a5a81842cb568a").then(response => this.setState({
-            name: response.message.name,
-            height: response.message.height,
-            weight: response.message.weight,
 
-        }),
-        )
+        PokemonService.getOne("5b7b189563a5a81842cb568e").then(response => {
+            if (response !== null) {
+                this.setState({
+                    name: response.message.name,
+                    height: response.message.height,
+                    weight: response.message.weight,
+                })
+            }
+        })
+
     }
 
     deletePokemon = () => {
-        PokemonService.del("5b7afee363a5a81842cb568a").then(() => {
+        PokemonService.del("5b7b189563a5a81842cb568e").then(() => {
             console.log('test');
-            this.props.history.push("/pokemon-overview/");
+            this.props.history.push("/pokemon-overview");
+            window.location.href = 'http://localhost:3000/';
         });
     }
 
@@ -53,10 +59,11 @@ export class PokemonDetails extends React.Component {
                     <ThirdButton url={"/pokemon/edit/" + this.state.name} name="Edit" />
                 </div>
                 <div>
-                    <form onSubmit={this.deletePokemon}>
+                    <form onSubmit={this.deletePokemon}  >
                         <label>
-                            <span>&nbsp;</span><input type="submit" className="fourth_button" value="Delete Pokemon" href='http://localhost:3000/' />
+                            <input type="submit" className="fourth_button" value="Delete Pokemon" />
                         </label>
+
                     </form>
                 </div>
 

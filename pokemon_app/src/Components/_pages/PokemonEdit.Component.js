@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 export class PokemonEdit extends React.Component {
     onSubmit = (data) => {
         console.log('from edit page ' + JSON.stringify(data));
-        PokemonService.update("5b7afee363a5a81842cb568a", data).then(() => {
+        PokemonService.update("5b7b189563a5a81842cb568e", data).then(() => {
             this.props.history.push("/pokemon-overview/");
         })
     }
