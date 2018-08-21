@@ -5,7 +5,7 @@ import { ThirdButton } from '../buttons/ThirdButton.Component';
 import { FourthButton } from '../buttons/FourthButton.Component';
 import header from "../../assets/header.png";
 import bulba from '../../assets/bulb.png';
-import { Pokemon } from "../pokemons/Pokemon";
+
 
 
 export class PokemonDetails extends React.Component {
@@ -22,7 +22,7 @@ export class PokemonDetails extends React.Component {
 
     componentWillMount = () => {
 
-        PokemonService.getOne("5b7b2b4a63a5a81842cb568f").then(response => {
+        PokemonService.getOne("5b7be47777dcb03707637e2f").then(response => {
             if (response !== null) {
                 this.setState({
                     name: response.message.name,
@@ -34,11 +34,15 @@ export class PokemonDetails extends React.Component {
 
     }
 
+    redirectPage = () => {
+        <Link to="/"></Link>
+    }
     deletePokemon = () => {
-        PokemonService.del("5b7b2b4a63a5a81842cb568f").then(() => {
+        PokemonService.del("5b7be47777dcb03707637e2f").then(() => {
+
             console.log('test');
             this.props.history.push("/pokemon-overview");
-            window.location.href = 'http://localhost:3000/';
+
         });
     }
 
@@ -59,7 +63,7 @@ export class PokemonDetails extends React.Component {
                     <ThirdButton url={"/pokemon/edit/" + this.state.name} name="Edit" />
                 </div>
                 <div>
-                    <form onSubmit={this.deletePokemon}  >
+                    <form onClick={this.redirectPage} onSubmit={this.deletePokemon}>
                         <label>
                             <input type="submit" className="fourth_button" value="Delete Pokemon" />
                         </label>

@@ -16,12 +16,16 @@ export class PokemonOverview extends React.Component {
     };
   }
 
-  componentWillMount = () => {
-    PokemonService.getAll().then(response =>
-      this.setState({ pokemons: response.message })
-    );
-  };
 
+  componentWillMount = () => {
+    PokemonService.getAll().then(response => {
+      if (response !== null) {
+        this.setState({
+          pokemons: response.message
+        })
+      }
+    })
+  }
   renderPokemons = () => {
 
     return this.state.pokemons.map((pokemon, i) => <Pokemon key={i} name={pokemon.name} />);
