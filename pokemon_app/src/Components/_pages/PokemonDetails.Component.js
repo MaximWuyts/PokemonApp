@@ -21,28 +21,19 @@ export class PokemonDetails extends React.Component {
     }
 
     componentWillMount = () => {
-
-        PokemonService.getOne("5b7be47777dcb03707637e2f").then(response => {
-            if (response !== null) {
-                this.setState({
-                    name: response.message.name,
-                    height: response.message.height,
-                    weight: response.message.weight,
-                })
-            }
-        })
-
+        PokemonService.getOne("5b7d6a3738f2dd85f8b9a646").then(response => this.setState({
+            name: response.message.name,
+            height: response.message.height,
+            weight: response.message.weight,
+        }))
     }
 
     redirectPage = () => {
         <Link to="/"></Link>
     }
     deletePokemon = () => {
-        PokemonService.del("5b7be47777dcb03707637e2f").then(() => {
-
-            console.log('test');
-            this.props.history.push("/pokemon-overview");
-
+        PokemonService.del("5b7d6a3738f2dd85f8b9a646").then(() => {
+            this.props.history.push("/");
         });
     }
 
@@ -63,12 +54,10 @@ export class PokemonDetails extends React.Component {
                     <ThirdButton url={"/pokemon/edit/" + this.state.name} name="Edit" />
                 </div>
                 <div>
-                    <form onClick={this.redirectPage} onSubmit={this.deletePokemon}>
-                        <label>
-                            <input type="submit" className="fourth_button" value="Delete Pokemon" />
-                        </label>
-
+                    <form onSubmit={this.deletePokemon}>
+                        <button className='fourth_button' type="submit">Delete</button>
                     </form>
+
                 </div>
 
             </div>

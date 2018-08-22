@@ -17,7 +17,7 @@ export class HomePage extends React.Component {
             <div className="homePage">
                 <img alt="Header" className="header_img" src={header}></img>
                 <br />
-                <img alt="Ash." className="img_home" src={Ash}></img>
+                <img alt="Ash" className="img_home" src={Ash}></img>
                 <br />
                 <MainButton className="home_btn" url="/pokemon-overview" name="Lets Go!" />
                 <FifthButton url="/loading" name="Loading Animations" />
