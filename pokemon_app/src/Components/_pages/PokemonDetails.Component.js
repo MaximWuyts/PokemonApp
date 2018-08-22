@@ -20,7 +20,7 @@ export class PokemonDetails extends React.Component {
     }
 
     componentWillMount = () => {
-        PokemonService.getOne("5b7d621438f2dd85f8b9a644").then(response => this.setState({
+        PokemonService.getOne("5b7d6a3738f2dd85f8b9a646").then(response => this.setState({
             name: response.message.name,
             height: response.message.height,
             weight: response.message.weight,
@@ -30,9 +30,8 @@ export class PokemonDetails extends React.Component {
     }
 
     deletePokemon = () => {
-        PokemonService.del("5b7d621438f2dd85f8b9a644").then(() => {
-            console.log('test');
-            this.props.history.push("/pokemon-overview/");
+        PokemonService.del("5b7d6a3738f2dd85f8b9a646").then(() => {
+            this.props.history.push("/");
         });
     }
 
@@ -53,7 +52,10 @@ export class PokemonDetails extends React.Component {
                     <ThirdButton url={"/pokemon/edit/" + this.state.name} name="Edit" />
                 </div>
                 <div>
-                    <FourthButton onClick={this.deletePokemon} url={"/pokemon-overview"} name="Delete" />
+                    <form onSubmit={this.deletePokemon}>
+                        <button className='fourth_button' type="submit">Delete</button>
+                    </form>
+
                 </div>
 
             </div>
